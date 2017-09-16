@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+        
+        <title>Conjura '17</title>
+      <style>
+	  .zoomin img { height: 200px; width: 200px; -webkit-transition: all 2s ease; -moz-transition: all 2s ease; -ms-transition: all 2s ease; transition: all 2s ease; } .zoomin img:hover { width: 350px; height: 350px; } 
+body {
+	background-color: #aeccfc;
+}
+
+
+@keyframes bounce{
+	0% {
+	
+		border-top: 0px solid #96044D;
+		border-bottom: 0px solid #96044D;
+
+	}
+	15% {
+	
+		opacity: 1;
+		border-top: 8px solid #96044D;
+		border-bottom: 8px solid #96044D;
+	}
+
+	75% {
+		
+		border-top: 0px solid #96044D;		
+		border-bottom: 0px solid #96044D;		
+
+	}
+
+	100% {
+		
+		border-top: 0px solid #96044D;		
+		border-bottom: 0px solid #96044D;		
+
+	}
+
+}
+
+#loader_p{
+ 
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -100px;
+}
+
+#preloader {
+	position: none;
+}
+
+.boxi {
+	border-top: 0px solid #96044D;
+	border-bottom: 0px solid #96044D;
+	border-radius: 2px;
+	background-color: #96044D;
+	width: 23px;
+	height: 20px;
+	margin: -10px 2px 2px 0;
+	position: absolute;
+	bottom:0;
+	-webkit-animation: bounce 1s  infinite ease-in-out alternate;
+	-moz-animation: bounce 1s  infinite ease-in-out alternate;
+	-msanimation: bounce 1s  infinite ease-in-out alternate;
+	-o-animation: bounce 1s  infinite ease-in-out alternate;
+	animation: bounce 1s  infinite ease-in-out alternate;
+}
+
+.boxi:nth-child(1) {
+	left: 0;
+	animation-delay: 0;
+}
+.boxi:nth-child(2) {
+	left: 25px;
+	animation-delay: 500ms;
+}
+.boxi:nth-child(3) {
+	left: 50px;
+	animation-delay: 1000ms;
+}
+
+.boxi:nth-child(4) {
+	left: 75px;
+	animation-delay: 1500ms;
+}
+.boxi:nth-child(5) {
+	left: 100px;
+	animation-delay: 2000ms;
+}
+.boxi:nth-child(6) {
+	left: 125px;
+	animation-delay: 2500ms;
+}
+.boxi:nth-child(7) {
+	left: 150px;
+	animation-delay: 3000ms;
+}
+.boxi:nth-child(8) {
+	left: 175px;
+	animation-delay: 3500ms;
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 2s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+</style>
+       <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <link rel="stylesheet" href="css/normalize1.css">
+
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.min.css'>
+        <link rel="stylesheet" href="css/style1.css">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/component.css" />
+        <!--[if IE]>
+        	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+	</head>
+	<body onload="myFunction()" style="margin:0;">
+
+ <div id="loader_p">
+ 	<div id="preloader">
+	<span class="boxi"></span>
+	<span class="boxi"></span>
+	<span class="boxi"></span>
+	<span class="boxi"></span>
+	<span class="boxi"></span>
+	<span class="boxi"></span>
+	<span class="boxi"></span>
+	<span class="boxi"></span>
+	</div>	
+</div>
+<div style="display:none;" id="myDiv" class="animate-bottom">
+<div class="row"  style="max-width:100%;overflow:hidden;">
+		<div class="container demo-3">
+			<div class="content">
+                <div id="large-header" class="large-header">
+                
+                <div id="gradient" />
+                    <canvas id="demo-canvas"></canvas>
+                    
+                    <div class="chat">
+                    
+  <div class="chat-title">
+    <h1>Ally</h1>
+    <h2>Your virtual Assistant For This Conjura</h2>
+    <figure class="avatar">
+      <img src="https://resources-api-ai.s3.amazonaws.com/442a49ab-1d30-471b-9876-aa0d574b1e18_l.png" /></figure>
+      
+  </div>
+  <div class="messages">
+    <div class="messages-content"></div>
+  </div>
+  <div class="message-box">
+    <textarea type="text" class="message-input" placeholder="Type message..."></textarea>
+    <button type="submit" class="message-submit">Send</button>
+ 
+
+</div>
+</div>
+</div>
+                </div>
+                <!-- /container -->
+                <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.concat.min.js'></script>
+
+        <script src="js/index1.js"></script>
+        <script src="js/TweenLite.min.js"></script>
+        <script src="js/EasePack.min.js"></script>
+       
+        <script src="js/demo-3.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader_p").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+	</body>
+</html>
